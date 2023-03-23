@@ -1,0 +1,76 @@
+:root{
+    --cor-fundo: white;
+    --cor-fonte: black;
+}
+
+
+    /* classe ativada pelo javaScript */
+.dark-mode{
+    --cor-fundo: black;
+    --cor-fonte: white;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    transition: 1s;
+  }
+
+.box{
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* switch */
+  label {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 34px;
+    position: relative;
+  }
+  
+  /* desligado */
+  label:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    transition: all 0.3s;
+  }
+  
+  /* ativado */
+  input:checked + label {
+    background-color: green;
+  }
+  
+  input:checked + label:after {
+    transform: translateX(130%);
+  }
+  
